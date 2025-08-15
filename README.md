@@ -1,4 +1,4 @@
-# DoW-DE-anti-sync-error-script
+# DoW:DE anti-sync-error script
 Script to fix Sync error on multiplayer games
 
 Original script from https://gist.github.com/TechT10n/79b853003f2e9841a18e8b6decd0fd3e
