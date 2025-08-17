@@ -1,9 +1,10 @@
 Fix for sync error in Dawn of War: Definitive Edition multiplayer
 ===
 
-Issue seems to be related with lack of/invalid ucrtbase.dll in proton prefix. To fix it you either use script for Company of Heroes 2 (here is version adapted to DoW:DE) or using protontricks.
+Issue seems to be related with lack of/invalid ucrtbase.dll in proton prefix. To fix it you either use script for Company of Heroes 2 (here is version adapted to DoW:DE) or using protontricks. For others, only installing vcrun2019/2022 with protonntricks was helpful.
+Methods collected from Steam community advices.
 
-A. Script to fix Sync error on multiplayer games
+A. ucrtbase.dll via script 
 -   
 
 Original script from https://gist.github.com/TechT10n/79b853003f2e9841a18e8b6decd0fd3e
@@ -15,15 +16,19 @@ Path starting from home directory, so should be enough to download anywhere, and
 - If you got **non-standard path** to steamapps folder, have to change one in script in `STEAM_ROOT=$HOME/.steam/steam` line
 - if you got **flatpak**, comment `STEAM_ROOT=$HOME/.steam/steam` and uncomment `# STEAM_ROOT=$HOME/.var/app/com.valvesoftware.Steam/.local/share/Steam`
 
-B. Protontricks
+B. ucrtbase.dll via Protontricks
 -
-It should work also if using protontricks. I have not used this method, but I assume it goes like:
-- install protontricks
-- run prototricks and select DoW:DE
-- select default prefix
-- install windows dll
-- select uctrbase2019
-- ok
-(to be comfirmed)
 
-If you know terminal oneliner, I will be happy to add it here too. 
+You can install this dll via protontricks.
+- gui: run protontricks and select DoW:DE -> select default prefix -> install windows dll -> select uctrbase2019 -> ok
+- terminal: `protontricks 3556750 ucrtbase2019'
+
+C. vcrun2019/vcrun2022 via Protontricks
+-
+- gui: run protontricks and select DoW:DE -> select default prefix -> install windows dll -> select vcrun2019 -> ok
+- terminal: `protontricks 3556750 vcrun2019'
+
+vcrun2022 should work too.
+
+
+
