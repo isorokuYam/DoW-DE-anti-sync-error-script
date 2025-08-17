@@ -2,7 +2,7 @@ Fix for sync error in Dawn of War: Definitive Edition multiplayer
 ===
 
 Issue seems to be related with lack of/invalid ucrtbase.dll in proton prefix. To fix it you either use script for Company of Heroes 2 (here is version adapted to DoW:DE) or using protontricks. For others, only installing vcrun2019/2022 with protonntricks was helpful.
-Methods collected from Steam community advices.
+Methods collected from Steam community advices. 
 
 A. ucrtbase.dll via script 
 -   
@@ -21,12 +21,12 @@ B. ucrtbase.dll via Protontricks
 
 You can install this dll via protontricks.
 - gui: run protontricks and select DoW:DE -> select default prefix -> install windows dll -> select uctrbase2019 -> ok
-- terminal: `protontricks 3556750 ucrtbase2019'
+- terminal: `protontricks 3556750 ucrtbase2019`
 
 C. vcrun2019/vcrun2022 via Protontricks
 -
 - gui: run protontricks and select DoW:DE -> select default prefix -> install windows dll -> select vcrun2019 -> ok
-- terminal: `protontricks 3556750 vcrun2019'
+- terminal: `protontricks 3556750 vcrun2019`
 
 vcrun2022 should work too.
 
